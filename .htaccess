@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /C02_meusClientes/mvc_padrao/index.php?q=$1 [QSA,L]
+#RewriteRule ^(.*)$ /projeto/index.php?q=$1 [QSA,L]
