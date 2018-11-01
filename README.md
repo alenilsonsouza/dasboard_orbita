@@ -2,4 +2,6 @@
 <p>Sitema base para os novos projetos</p>
 
 <hr>
-<p>Versão 1.0</p>
+<p><strong>Versão 1.0</strong><br>
+Área de Suporte desenvolvida
+</p>
