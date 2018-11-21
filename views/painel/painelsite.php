@@ -12,6 +12,10 @@
 				<label for="titulo">Título:</label>
 			</div>
 			<div class="input-field col s12">
+				<input type="text" name="emails" value="<?php echo $site['emails'];?>">
+				<label for="emails">E-mails: se houve mais de um e-mail separe por vígula.</label>
+			</div>
+			<div class="input-field col s12">
 				<textarea id="descricao" class="materialize-textarea" name="descricao"><?php echo $site['descricao'];?></textarea>
           		<label for="descricao">Descrição:</label>
 			</div>

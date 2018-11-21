@@ -22,6 +22,7 @@ class painelsiteController extends controller {
             $descricao = $_POST['descricao'];
             $palavra_chave = $_POST['palavra_chaves'];
             $scripts = $_POST['scripts'];
+            $emails = $_POST['emails'];
 
            
             $s = new Site();
@@ -29,6 +30,7 @@ class painelsiteController extends controller {
             $s->setDescricao($descricao);
             $s->setPalavraChave($palavra_chave);
             $s->setScripts($scripts);
+            $s->setEmails($emails);
             $s->atualizar();
             header("Location:".BASE_URL.'painelsite');
             exit;
