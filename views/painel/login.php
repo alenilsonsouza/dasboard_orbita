@@ -1,3 +1,9 @@
+<?php
+$s = new Site();
+$site = $s->getArray();
+$c = new Configuracoes();
+$configuracoes = $c->getArray();
+?>
 <!Doctype html>
 <html lang="pt-BR">
     <head>
@@ -6,7 +12,9 @@
         <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="<?php echo BASE_URL;?>assets/css/materialize.min.css"  media="screen,projection"/>
+      <style type="text/css">
+        <?php require 'assets/css/materialize.min.css';?> 
+      </style>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
