@@ -58,8 +58,10 @@ $configuracoes = $c->getArray();
       <ul>
         <li><a href="<?php echo BASE_URL;?>" target="projeto"><i class="material-icons left">web</i>Ver Site</a></li>
         <li><a href="<?php echo BASE_URL;?>painel"><i class="material-icons left">dashboard</i>Painel</a></li>
-        <li><a href="<?php echo BASE_URL;?>painelbanners"><i class="material-icons left">collections</i>Banners</a></li>
         <li><a href="<?php echo BASE_URL;?>painelsite"><i class="material-icons left">web</i>Site</a></li>
+        <li><a href="<?php echo BASE_URL;?>painelredessociais"><i class="material-icons left">public</i>Redes Sociais</a></li>
+        <li><a href="<?php echo BASE_URL;?>painelbanners"><i class="material-icons left">collections</i>Banners</a></li>
+        
        <li><a href="<?php echo BASE_URL;?>painelusuarios"><i class="material-icons left">supervised_user_circle</i>Usuarios</a></li>
        <li><a href="<?php echo BASE_URL;?>painelsuporte"><i class="material-icons left">help</i>Suporte</a></li>
         <li><a href="<?php echo BASE_URL;?>login/sair"><i class="material-icons left">exit_to_app</i>Sair</a></li>

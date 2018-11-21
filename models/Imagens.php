@@ -98,25 +98,24 @@ class Imagens extends model{
 
 		
 
-		if(count($imagem['tmp_name']) > 0){
+		if(count($imagem['tmp_name']) > 1){
 
 			$total = count($imagem['tmp_name']);
 			
 		
 			for($n = 0; $n < $total; $n++){
 
+
 				if($imagem['type'][$n] == "image/png"){
 
 					$extensao = "png";
 					$status = true;
 					
-
 				}elseif($imagem['type'][$n] == "image/jpeg"){
 
 					$extensao = "jpg";
 					$status = true;
 					
-
 				}else{
 					$status = false;
 					
@@ -142,12 +141,57 @@ class Imagens extends model{
 					$sql->bindValue(":nome_url", $this->nome_url);
 					$sql->bindValue(":id_produto", $this->id_produto);
 					$sql->execute();
+					$id_imagem = $this->db->lastInsertId();
+					return $id_imagem;
+				}else{
+					return 0;
 				}				
-				
-				
-				
+					
 			}
 			
+		}else{
+
+			if($imagem['type'] == "image/png"){
+
+					$extensao = "png";
+					$status = true;
+					
+				}elseif($imagem['type'] == "image/jpeg"){
+
+					$extensao = "jpg";
+					$status = true;
+					
+				}else{
+					$status = false;
+					
+				}
+				
+				
+				if($status == true){
+					list($largura, $altura) = getimagesize($imagem['tmp_name']);
+					$nomedoarquivo = md5(rand(0,999).time()).".".$extensao;
+					move_uploaded_file($imagem['tmp_name'], 'assets/arquivos/'.$nomedoarquivo);
+
+					
+					$this->setNomeUrl($nomedoarquivo);
+					$this->setLargura($largura);
+					$this->setAltura($altura);
+					$this->setTamanhoBytes($imagem['size']);
+
+					$sql = "INSERT INTO imagens (tamanho_bytes, largura, altura, nome_url, id_produto) VALUES (:tamanho_bytes, :largura, :altura, :nome_url, :id_produto)";
+					$sql = $this->db->prepare($sql);
+					$sql->bindValue(":tamanho_bytes", $this->tamanho_bytes);
+					$sql->bindValue(":largura", $this->largura);
+					$sql->bindValue(":altura", $this->altura);
+					$sql->bindValue(":nome_url", $this->nome_url);
+					$sql->bindValue(":id_produto", $this->id_produto);
+					$sql->execute();
+					$id_imagem = $this->db->lastInsertId();
+					return $id_imagem;
+				}else{
+					return 0;
+				}
+
 		}
 
 
