@@ -34,7 +34,7 @@
 	<?php endif;?>
 </section>
 
-
+teste
 
 
 <script src="<?php echo BASE_URL;?>assets/js/vanillaSlideshow.min.js"></script>
