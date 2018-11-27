@@ -171,7 +171,7 @@ class Usuarios extends model{
 			$sql->bindValue(":id", $_SESSION['plogin']);
 			$sql->execute();
 
-			unset($_SESSION['plogin']);
+			unset($_SESSION['plogin']); 
 		}
 	}
 
