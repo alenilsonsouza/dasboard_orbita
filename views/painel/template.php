@@ -61,6 +61,7 @@ $configuracoes = $c->getArray();
         <li><a href="<?php echo BASE_URL;?>painelsite"><i class="material-icons left">web</i>Site</a></li>
         <li><a href="<?php echo BASE_URL;?>painelredessociais"><i class="material-icons left">public</i>Redes Sociais</a></li>
         <li><a href="<?php echo BASE_URL;?>painelbanners"><i class="material-icons left">collections</i>Banners</a></li>
+        <li><a href="<?php echo BASE_URL;?>painelblog"><i class="material-icons left">collections</i>Blog</a></li>
         
        <li><a href="<?php echo BASE_URL;?>painelusuarios"><i class="material-icons left">supervised_user_circle</i>Usuarios</a></li>
        <li><a href="<?php echo BASE_URL;?>painelsuporte"><i class="material-icons left">help</i>Suporte</a></li>
