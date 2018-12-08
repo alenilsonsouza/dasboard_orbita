@@ -15,7 +15,7 @@ class Blog extends model{
 		$this->array = array();
 		if(!empty($id)){
 
-			$sql = "SELECT * FROM blog LEFT JOIN imagens ON blog.id_imagem = imagens.id WHERE MD5(blog.id_blog) = :id";
+			$sql = "SELECT * FROM blog LEFT JOIN arquivos ON blog.id_imagem = arquivos.id WHERE MD5(blog.id_blog) = :id";
 			$sql = $this->db->prepare($sql);
 			$sql->bindValue(":id", $id);
 			$sql->execute();
@@ -69,15 +69,19 @@ class Blog extends model{
 		}
 	}
 
-	public function setArray($array){
+	public function setArray($array){ 
 		if(is_array($array)){
 			$this->array = $array;
 		}
 	}
 
+	public function getArray(){
+		return $this->array;
+	}
+
 	public function getBlogs($offset, $limite){
 		$array = array();
-		$sql = "SELECT * FROM blog LEFT JOIN imagens ON blog.id_imagem = imagens.id ORDER BY blog.id_blog DESC LIMIT $offset, $limite";
+		$sql = "SELECT * FROM blog LEFT JOIN arquivos ON blog.id_imagem = arquivos.id ORDER BY blog.id_blog DESC LIMIT $offset, $limite";
 		$sql = $this->db->query($sql);
 		if($sql->rowCount()>0){
 			$array = $sql->fetchAll();
@@ -110,13 +114,12 @@ class Blog extends model{
 
 		}else{
 
-			$sql = "INSERT INTO blog (titulo_blog, slug_blog, meta_description_blog, data_cadastro_blog, data_atualizacao_blog, texto_blog, id_imagem) VALUES (:titulo_blog, :slug_blog, :meta_description_blog, :data_atualizacao_blog, :data_atualizacao_blog, :texto_blog, :id_imagem)";
+			$sql = "INSERT INTO blog (titulo_blog, slug_blog, meta_description_blog, data_cadastro_blog, texto_blog, id_imagem) VALUES (:titulo_blog, :slug_blog, :meta_description_blog, :data_cadastro_blog, :texto_blog, :id_imagem)";
 			$sql = $this->db->prepare($sql);
 			$sql->bindValue(":titulo_blog", $this->titulo_blog);
 			$sql->bindValue(":slug_blog", $this->slug_blog);
 			$sql->bindValue(":meta_description_blog", $this->meta_description_blog);
 			$sql->bindValue(":data_cadastro_blog", $this->data_cadastro_blog);
-			$sql->bindValue(":data_atualizacao_blog", $this->data_atualizacao_blog);
 			$sql->bindValue(":texto_blog", $this->texto_blog);
 			$sql->bindValue(":id_imagem", $this->id_imagem);
 			$sql->execute();

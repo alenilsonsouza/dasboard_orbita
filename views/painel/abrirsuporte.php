@@ -52,36 +52,7 @@
 </div>
 <script type="text/javascript" src="<?php echo BASE_URL;?>ckeditor/ckeditor.js"></script>
 <script type="text/javascript">
-ClassicEditor
-    .create( document.querySelector( '#corpo' ),{
-      cloudServices: {
-        tokenUrl: 'https://33527.cke-cs.com/token/dev/fet7eiwYuxWF07g20fwJcudpMhKVGeoqBnfgtoCWRHRBFqXmBfo1fkoTTVmf',
-            uploadUrl: '<?php echo BASE_URL;?>assets/arquivos/'
-        },
-        ckfinder: {
-            uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
-        },
-        image: {
-      // You need to configure the image toolbar too, so it uses the new style buttons.
-      toolbar: [ 'imageTextAlternative', '|', 'imageStyleAlignLeft', 'imageStyleFull', 'imageStyleAlignRight' ],
-
-      styles: [
-        // This option is equal to a situation where no style is applied.
-        'imageStyleFull',
-
-        // This represents an image aligned to left.
-        'imageStyleAlignLeft',
-
-        // This represents an image aligned to right.
-        'imageStyleAlignRight'
-      ]
-    }
-    } )
-    .then( editor => {
-        console.log( editor );
-    } )
-    .catch( error => {
-        console.error( error );
-    } );
-
-  </script>
+  window.onload=function(){
+    CKEDITOR.replace("corpo");
+  }
+</script>

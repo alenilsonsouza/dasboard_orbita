@@ -76,9 +76,7 @@ $configuracoes = $c->getArray();
 
 </div> 
 <div class="both"></div>
-<footer class="rodape">      
-©Todos os direitos reservados
-</footer>
+
 
   
  <script type="text/javascript">
@@ -91,6 +89,8 @@ $configuracoes = $c->getArray();
   });
   });
 </script>  
+
+
 
 <?php echo $site['scripts'];?>
 </body>
