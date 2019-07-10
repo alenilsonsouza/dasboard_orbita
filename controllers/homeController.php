@@ -17,9 +17,7 @@ class homeController extends controller {
         $dados['banners'] = $b->getArray();
 
         $v = new Video();
-        $dados['video'] = $v->getArray();
-
-        
+        $dados['video'] = $v->getArray(); 
 		
 		
         $this->loadTemplate('home', $dados);

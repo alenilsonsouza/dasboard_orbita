@@ -39,8 +39,9 @@
 .brand-logo .imagem img{width: 80%; margin: 0 auto 0 auto; display: block; padding-top: 10px; padding-bottom:10px;}
 .conteudo-menor{max-width: 350px; margin:0 auto;}
 /*Alteração*/
-.menuLateral{float: left; width: 15%; background-color:#ccc; height: 100vh; overflow: auto}
-.conteudoPrincipal{float: left; width: 85%}
+.menuLateral{float: left; width: 15%; background-color:#ccc; height: 100vh; 
+	position: fixed; top: 0; left:0; overflow: auto}
+.conteudoPrincipal{float: left; width: 85%; float: right;}
 .both{clear: both}
 .rodape{position: fixed; bottom: 0; left:0; background-color: #000; color:#fff; width: 100%; padding: 10px 0; text-align: center}
 .menuVertical{height: auto; overflow: auto}

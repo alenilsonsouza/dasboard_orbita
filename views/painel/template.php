@@ -14,8 +14,7 @@ $configuracoes = $c->getArray();
     <meta name="description" content="<?php echo $site['descricao'];?>">
     <meta name="keywords" content="<?php echo $site['palavra_chave'];?>">
 <style type="text/css" media="screen,projection">
-  
-  <?php require 'assets/css/materialize.min.css';?>
+<?php require 'assets/css/materialize.min.css';?>
 </style>
 		
 		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -34,7 +33,7 @@ $configuracoes = $c->getArray();
 
 
 
-<div class="container-fluid">
+<div class="container-fluid"> 
   <div class="menuLateral">
     <a href="<?php echo BASE_URL;?>painel" class="brand-logo">
         <div class="imagem">
@@ -70,7 +69,7 @@ $configuracoes = $c->getArray();
     </nav>
   </div>
   <div class="conteudoPrincipal">
-  	<?php $this->loadViewInPainel($viewName, $viewData); ?>
+  	<?php $this->loadViewInPainel($viewName, $viewData); ?> 
   </div>
 
 
@@ -89,9 +88,9 @@ $configuracoes = $c->getArray();
   });
   });
 </script>  
-
-
-
+<script type="text/javascript">var BASE_URL = '<?php echo BASE_URL;?>';</script>
+<script src="<?php echo BASE_URL;?>assets/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/script_painel.js"></script>
 <?php echo $site['scripts'];?>
 </body>
 </html>
