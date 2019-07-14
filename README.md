@@ -7,7 +7,7 @@
 <hr>
 <h2>Versão 0.0.18</h2>
 <ul>
-    <li>Correção de link de fonte</li>
+    <li>Correção de link de fonte do painel</li>
     <li>Exclusão de script desnecessario para boa performace</li>
 </ul>
 <h2>Versão 0.0.17</h2>
