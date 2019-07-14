@@ -1,10 +1,16 @@
 <h1>MVC Padrão</h1>
 <p>Sistema base para os novos projetos</p>
-<a href="#versão-0015">Versão 0.0.15</a>
-<a href="#versão-0014">Versão 0.0.14</a>
-<a href="#versão-0013">Versão 0.0.13</a>
+<a href="#versão-0015">Versão 0.0.15</a><br>
+<a href="#versão-0014">Versão 0.0.14</a><br>
+<a href="#versão-0013">Versão 0.0.13</a><br>
 <a href="#configurações-iniciais">Configurações Iniciais</a>
 <hr>
+<h2>Versão 0.0.17</h2>
+<ul>
+    <li>Aprimoramento de performace de arquivos</li>
+    <li>Atualizacao de título do painel</li>
+    <li>Exclusao de arquivos duplicados e desnecessários</li>
+</ul>
 <h2>Versão 0.0.16</h2>
 <ul>
 	<li>Atualizacao do readme</li>

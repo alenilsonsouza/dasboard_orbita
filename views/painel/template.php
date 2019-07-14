@@ -10,7 +10,7 @@ $configuracoes = $c->getArray();
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Painel</title>
+		<title>Painel - <?php echo $site['titulo'];?></title>
     <meta name="description" content="<?php echo $site['descricao'];?>">
     <meta name="keywords" content="<?php echo $site['palavra_chave'];?>">
 <style type="text/css" media="screen,projection">
@@ -24,15 +24,10 @@ $configuracoes = $c->getArray();
       <link rel="icon" href="<?php echo BASE_URL;?>assets/images/favicon.ico" sizes="16x16 32x32 64x64" type="image/x-icon">
 		
 		<!--Material Design-->
-		<script type="text/javascript" src="assets/js/jquery-1.6.3.min.js"></script>
-		<script type="text/javascript" src="assets/js/materialize.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/materialize.min.js"></script>
 
 <body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/materialize.min.js"></script>
-
-
-
 <div class="container-fluid"> 
   <div class="menuLateral">
     <a href="<?php echo BASE_URL;?>painel" class="brand-logo">
@@ -91,6 +86,6 @@ $configuracoes = $c->getArray();
 <script type="text/javascript">var BASE_URL = '<?php echo BASE_URL;?>';</script>
 <script src="<?php echo BASE_URL;?>assets/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/script_painel.js"></script>
-<?php echo $site['scripts'];?>
+
 </body>
 </html>
