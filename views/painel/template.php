@@ -73,16 +73,7 @@ $configuracoes = $c->getArray();
 
 
   
- <script type="text/javascript">
-  $(".button-collapse").sideNav();
-  $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('.modal').modal();
-    $(document).ready(function() {
-    $('select').material_select();
-  });
-  });
-</script>  
+
 <script type="text/javascript">var BASE_URL = '<?php echo BASE_URL;?>';</script>
 <script src="<?php echo BASE_URL;?>assets/js/jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src="<?php echo BASE_URL;?>assets/js/script_painel.js"></script>

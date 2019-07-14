@@ -5,6 +5,11 @@
 <a href="#versão-0013">Versão 0.0.13</a><br>
 <a href="#configurações-iniciais">Configurações Iniciais</a>
 <hr>
+<h2>Versão 0.0.18</h2>
+<ul>
+    <li>Correção de link de fonte</li>
+    <li>Exclusão de script desnecessario para boa performace</li>
+</ul>
 <h2>Versão 0.0.17</h2>
 <ul>
     <li>Aprimoramento de performace de arquivos</li>
