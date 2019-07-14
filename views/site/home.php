@@ -35,8 +35,6 @@
 </section>
 
 
-
-
 <script src="<?php echo BASE_URL;?>assets/js/vanillaSlideshow.min.js"></script>
 <script>
 vanillaSlideshow.init({

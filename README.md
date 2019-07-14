@@ -2,8 +2,34 @@
 <p>Sistema base para os novos projetos</p>
 
 <hr>
+<h2>Versão 0.0.14</h2>
 
-
+<ul>
+	<li>Exclusão de arquivos inúteis</li>
+	<li>Adicionado o .gitignore</li>
+</ul>
+<p>Script CEP no também foi adicionar ao arquivo script_painel.js (Javascript responsável pelo painel):</p>
+<pre>
+	//Scritp javascritp com ajax para busca de cep
+	$('#cep').blur(function(){    
+       $.ajax({
+            url : BASE_URL+'ajax/consultar_cep',  
+            type : 'POST', 
+            data: 'cep=' + $('#cep').val(), 
+            dataType: 'json', 
+            success: function(data){
+                if(data.sucesso == 1){
+                    $('#rua').val(data.rua);
+                    $('#bairro').val(data.bairro);
+                    $('#cidade').val(data.cidade);
+                    $('#estado').val(data.estado);
+                    $('#numero').focus();
+                }
+            }
+       });   
+   return false;    
+   })
+</pre>
 <h2>Versão 0.0.13</h2>
 
 <ul>
