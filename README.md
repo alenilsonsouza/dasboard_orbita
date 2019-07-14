@@ -2,6 +2,11 @@
 <p>Sistema base para os novos projetos</p>
 
 <hr>
+<h2>Versão 0.0.15</h2>
+
+<ul>
+	<li>Organizado o arquivo do Banco de Dados para a pasta #BD</li>
+</ul>
 <h2>Versão 0.0.14</h2>
 
 <ul>
@@ -10,25 +15,25 @@
 </ul>
 <p>Script CEP no também foi adicionar ao arquivo script_painel.js (Javascript responsável pelo painel):</p>
 <pre>
-	//Scritp javascritp com ajax para busca de cep
-	$('#cep').blur(function(){    
-       $.ajax({
-            url : BASE_URL+'ajax/consultar_cep',  
-            type : 'POST', 
-            data: 'cep=' + $('#cep').val(), 
-            dataType: 'json', 
-            success: function(data){
-                if(data.sucesso == 1){
-                    $('#rua').val(data.rua);
-                    $('#bairro').val(data.bairro);
-                    $('#cidade').val(data.cidade);
-                    $('#estado').val(data.estado);
-                    $('#numero').focus();
-                }
+//Scritp javascritp com ajax para busca de cep
+$('#cep').blur(function(){    
+   $.ajax({
+        url : BASE_URL+'ajax/consultar_cep',  
+        type : 'POST', 
+        data: 'cep=' + $('#cep').val(), 
+        dataType: 'json', 
+        success: function(data){
+            if(data.sucesso == 1){
+                $('#rua').val(data.rua);
+                $('#bairro').val(data.bairro);
+                $('#cidade').val(data.cidade);
+                $('#estado').val(data.estado);
+                $('#numero').focus();
             }
-       });   
-   return false;    
-   })
+        }
+   });   
+return false;    
+})
 </pre>
 <h2>Versão 0.0.13</h2>
 
@@ -39,38 +44,38 @@
 </ul>
 <p>Script CEP no Arquivo script.js:</p>
 <pre>
-	//Scritp javascritp com ajax para busca de cep
-	$('#cep').blur(function(){    
-       $.ajax({
-            url : BASE_URL+'ajax/consultar_cep',  
-            type : 'POST', 
-            data: 'cep=' + $('#cep').val(), 
-            dataType: 'json', 
-            success: function(data){
-                if(data.sucesso == 1){
-                    $('#rua').val(data.rua);
-                    $('#bairro').val(data.bairro);
-                    $('#cidade').val(data.cidade);
-                    $('#estado').val(data.estado);
-                    $('#numero').focus();
-                }
+//Scritp javascritp com ajax para busca de cep
+$('#cep').blur(function(){    
+   $.ajax({
+        url : BASE_URL+'ajax/consultar_cep',  
+        type : 'POST', 
+        data: 'cep=' + $('#cep').val(), 
+        dataType: 'json', 
+        success: function(data){
+            if(data.sucesso == 1){
+                $('#rua').val(data.rua);
+                $('#bairro').val(data.bairro);
+                $('#cidade').val(data.cidade);
+                $('#estado').val(data.estado);
+                $('#numero').focus();
             }
-       });   
-   return false;    
-   })
+        }
+   });   
+	return false;    
+	})
 </pre>
 <p>A consulta fica no arquivo controller ajax (ajaxController.php):</p>
 <pre>
-	public function consultar_cep(){
-        $cep = $_POST['cep'];
-        $reg = simplexml_load_file("http://cep.republicavirtual.com.br/web_cep.php?formato=xml&cep=" . $cep);
-        $dados['sucesso'] = (string) $reg->resultado;
-        $dados['rua']     = (string) $reg->tipo_logradouro . ' ' . $reg->logradouro;
-        $dados['bairro']  = (string) $reg->bairro;
-        $dados['cidade']  = (string) $reg->cidade;
-        $dados['estado']  = (string) $reg->uf;
-        echo json_encode($dados);
-    }
+public function consultar_cep(){
+    $cep = $_POST['cep'];
+    $reg = simplexml_load_file("http://cep.republicavirtual.com.br/web_cep.php?formato=xml&cep=" . $cep);
+    $dados['sucesso'] = (string) $reg->resultado;
+    $dados['rua']     = (string) $reg->tipo_logradouro . ' ' . $reg->logradouro;
+    $dados['bairro']  = (string) $reg->bairro;
+    $dados['cidade']  = (string) $reg->cidade;
+    $dados['estado']  = (string) $reg->uf;
+    echo json_encode($dados);
+}
 </pre>	
 
 <h2>Configurações Iniciais:</h2>
