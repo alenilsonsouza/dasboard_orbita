@@ -4,7 +4,7 @@
 <hr>
 
 
-<h2>Versão 0.0.12<h2>
+<h2>Versão 0.0.13</h2>
 
 <ul>
 	<li>Aprimorado o A busca de CEP para o javascritp do site e do painel</li>
@@ -77,4 +77,4 @@ if(ENVIRONMENT == 'development') {
 	RewriteRule ^(.*)$ /C02_meusClientes/mvc_padrao/index.php?q=$1 [QSA,L]
 	#RewriteRule ^(.*)$ /index.php?q=$1 [QSA,L]
 </pre>
-<p><strong>OBS: Deve-se alterar de acordo com a url de desenvolvimento ou de produção.</strong></p>
+<p><strong>OBS:</strong> Deve-se alterar de acordo com a url de desenvolvimento ou de produção.</p>
