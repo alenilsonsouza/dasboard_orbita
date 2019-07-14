@@ -1,14 +1,20 @@
 <h1>MVC Padrão</h1>
 <p>Sistema base para os novos projetos</p>
-
+<a href="#versão-0015">Versão 0.0.15</a>
+<a href="#versão-0014">Versão 0.0.14</a>
+<a href="#versão-0013">Versão 0.0.13</a>
+<a href="#configurações-iniciais">Configurações Iniciais</a>
 <hr>
+<h2>Versão 0.0.16</h2>
+<ul>
+	<li>Atualizacao do readme</li>
+</ul>
 <h2>Versão 0.0.15</h2>
-
 <ul>
 	<li>Organizado o arquivo do Banco de Dados para a pasta #BD</li>
 </ul>
-<h2>Versão 0.0.14</h2>
 
+<h2>Versão 0.0.14</h2>
 <ul>
 	<li>Exclusão de arquivos inúteis</li>
 	<li>Adicionado o .gitignore</li>
