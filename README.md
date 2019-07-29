@@ -6,6 +6,8 @@
 <a href="#configurações-iniciais">Configurações Iniciais</a>
 <hr>
 <h2>Versão 0.0.21</h2>
+
+
 <ul>
     <li>Atualização do Banco de Dados</li>
     <li>Possibilidade de Excluir contatos</li>
