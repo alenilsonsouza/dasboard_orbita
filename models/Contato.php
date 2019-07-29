@@ -69,4 +69,12 @@ class Contato extends model{
 		$sql = $sql->fetch();
 		return $sql['t'];
 	}
+
+	public function excluir($id){
+
+		$sql = "DELETE FROM contato WHERE MD5(id_contato) = :id";
+		$sql = $this->db->prepare($sql);
+		$sql->bindValue(":id", $id);
+		$sql->execute();
+	}
 }

@@ -12,17 +12,24 @@
 				<th>E-mail</th>
 				<th>Assunto</th>
 				<th>Mensagem</th>
+				<th>Ações</th>
 			</tr>
-			<?php foreach($contatos as $orca):?>
+			<?php foreach($contatos as $contato):?>
 				<tr>
-					<td width="80"><?php echo date('d/m/Y', strtotime($orca['data']));?></td>
-					<td width="100"><?php echo $orca['nome'];?></td>
-					<td width="120"><?php echo $orca['email'];?></td>
-					<td width="130"><?php echo $orca['assunto'];?></td>
-					<td width="250"><?php echo $orca['mensagem'];?></td>
+					<td width="80"><?php echo date('d/m/Y', strtotime($contato['data']));?></td>
+					<td width="100"><?php echo $contato['nome'];?></td>
+					<td width="120"><?php echo $contato['email'];?></td>
+					<td width="130"><?php echo $contato['assunto'];?></td>
+					<td width="250"><?php echo $contato['mensagem'];?></td>
+					<td>
+						<a href="<?php echo BASE_URL;?>painelcontato/excluir/<?php echo md5($contato['id_contato']);?>" class="btn">Excluir</a>
+					</td>
 				</tr>
 			<?php endforeach;?>
 		</table>
+		<?php if(count($contatos)==0):?>
+			<p>Nenhum Contato Cadastrado!</p>
+		<?php endif;?>
 	</div>
 </div>
 <div class="row">

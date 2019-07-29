@@ -5,6 +5,11 @@
 <a href="#versão-0013">Versão 0.0.13</a><br>
 <a href="#configurações-iniciais">Configurações Iniciais</a>
 <hr>
+<h2>Versão 0.0.21</h2>
+<ul>
+    <li>Atualização do Banco de Dados</li>
+    <li>Possibilidade de Excluir contatos</li>
+</ul>
 <h2>Versão 0.0.20</h2>
 <ul>
     <li>Ajustes de navegação dos links do menu</li>

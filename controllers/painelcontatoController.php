@@ -38,6 +38,15 @@ class painelcontatoController extends controller {
         $this->loadTemplateInPainel('painelcontato', $dados);
     }
 
+    public function excluir($id){
+
+        $contato = new Contato();
+        $contato->excluir($id); 
+
+        header('Location:'.BASE_URL.'painelcontato');
+        exit;
+    }
+
     
 
 }

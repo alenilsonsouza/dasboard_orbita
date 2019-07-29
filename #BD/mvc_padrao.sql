@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 08-Dez-2018 às 13:22
--- Versão do servidor: 5.7.16
--- PHP Version: 5.6.26
+-- Generation Time: 29-Jul-2019 às 18:14
+-- Versão do servidor: 5.7.24
+-- versão do PHP: 7.1.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -42,8 +44,6 @@ CREATE TABLE `arquivos` (
 --
 
 INSERT INTO `arquivos` (`id`, `nome_arquivo`, `url_arquivo`, `data_cadastro`, `tamanho_mb`, `tipo`, `largura`, `altura`) VALUES
-(111, 'preparatorio-concurso.jpg', 'bad333d45cccf19c14bcc9fb41ba441d.jpg', '2018-10-23', '167514', 'image/jpeg', 1920, 462),
-(112, 'banner-ingles.jpg', '79ec74ea4d3b628469cfde230ea74459.jpg', '2018-10-23', '87460', 'image/jpeg', 1920, 462),
 (114, 'logo_aleevolucoes.png', '9e8840a5797c106a977fa801851f6170.png', '2018-10-23', '14782', 'image/png', 195, 87),
 (115, 'logo_aleevolucoes.png', 'd43603c1846efb599b3a894e97ed517e.png', '2018-10-23', '14782', 'image/png', 195, 87),
 (121, 'logo_aleevolucoes.png', '5ef7f4624792c36af3d06350be7fc9f8.png', '2018-10-23', '14782', 'image/png', 195, 87),
@@ -55,7 +55,8 @@ INSERT INTO `arquivos` (`id`, `nome_arquivo`, `url_arquivo`, `data_cadastro`, `t
 (132, 'ccccccc.jpg', '1170eba626aa48091efbd65fa60d890d.jpg', '2018-12-08', '157995', 'image/jpeg', 400, 400),
 (133, 'ddddddssdsdsdsds.jpg', '2b0a7f4b18065da86e48e587d43f02b2.jpg', '2018-12-08', '162433', 'image/jpeg', 400, 400),
 (136, 'eeeee.jpg', '4e0b26301308ece66b7098b59a48303f.jpg', '2018-12-08', '100119', 'image/jpeg', 400, 400),
-(137, 'ddddddssdsdsdsds.jpg', '57bdc8de225a30a5f69fc16028863426.jpg', '2018-12-08', '162433', 'image/jpeg', 400, 400);
+(137, 'ddddddssdsdsdsds.jpg', '57bdc8de225a30a5f69fc16028863426.jpg', '2018-12-08', '162433', 'image/jpeg', 400, 400),
+(138, 'imagem_teste_blog.png', '4255f8b07b3a90b1c5525c8ac5f7640f.png', '2018-12-10', '176779', 'image/png', 1134, 490);
 
 -- --------------------------------------------------------
 
@@ -77,8 +78,7 @@ CREATE TABLE `banner_imagem` (
 --
 
 INSERT INTO `banner_imagem` (`id`, `id_arquivo`, `nome_banner`, `url`, `ordem`, `tela`) VALUES
-(1, 111, 'Banner Teste', NULL, 1, 1),
-(2, 112, 'Banner 2', NULL, 2, 1);
+(3, 138, 'teste', NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -152,7 +152,30 @@ CREATE TABLE `configuracoes` (
 --
 
 INSERT INTO `configuracoes` (`id`, `id_imagem`, `cor_padrao`) VALUES
-(1, 127, '#6ab147');
+(1, 127, '#27b33c');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `contato`
+--
+
+CREATE TABLE `contato` (
+  `id_contato` int(11) NOT NULL,
+  `nome` varchar(80) NOT NULL,
+  `email` varchar(80) NOT NULL,
+  `assunto` varchar(80) NOT NULL,
+  `mensagem` text NOT NULL,
+  `data` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `contato`
+--
+
+INSERT INTO `contato` (`id_contato`, `nome`, `email`, `assunto`, `mensagem`, `data`) VALUES
+(1, 'Alenilson Souza', 'alenlsonsouza@gmail.com', 'Assunto Teste', 'Mensagem Teste', '2019-07-24'),
+(2, 'Alenilson Souza', 'alenilsonsouza@gmail.com', 'Assunto Teste', 'Gostaria de fazer um orçamento', '2019-07-26');
 
 -- --------------------------------------------------------
 
@@ -240,7 +263,7 @@ CREATE TABLE `site` (
 --
 
 INSERT INTO `site` (`id`, `titulo`, `descricao`, `palavra_chave`, `emails`, `scripts`) VALUES
-(1, 'Título do projeto', 'Aqui vem a Descrição do seu projeto', 'Coloque as palavras-chave aqui', 'alenilsonsouza@gmail.com', '');
+(1, 'MVC Padrão', 'Descrição do projeto', 'Coloque as palavras-chave aqui', 'alenilsonsouza@gmail.com', '');
 
 -- --------------------------------------------------------
 
@@ -282,7 +305,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `email`, `senha`, `ip`, `ultimo_login`, `navegador`, `tipo`) VALUES
-(1, 'Alenilson Vieira de Souza', 'alenilsonsouza@gmail.com', '83ee787f916c12996ca4eff4093dd2dd', '::1', '2018-12-08', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36', 1),
+(1, 'Alenilson Vieira de Souza', 'alenilsonsouza@gmail.com', '83ee787f916c12996ca4eff4093dd2dd', '::1', '2019-07-29', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36', 1),
 (5, 'Orbita', 'juliana@agenciaorbita.com.br', '3075701349d122f0b953716d38989a95', NULL, NULL, NULL, 1);
 
 --
@@ -328,6 +351,12 @@ ALTER TABLE `configuracoes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contato`
+--
+ALTER TABLE `contato`
+  ADD PRIMARY KEY (`id_contato`);
+
+--
 -- Indexes for table `imagens`
 --
 ALTER TABLE `imagens`
@@ -365,57 +394,74 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `arquivos`
 --
 ALTER TABLE `arquivos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+
 --
 -- AUTO_INCREMENT for table `banner_imagem`
 --
 ALTER TABLE `banner_imagem`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `banner_video`
 --
 ALTER TABLE `banner_video`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
   MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `config`
 --
 ALTER TABLE `config`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `configuracoes`
 --
 ALTER TABLE `configuracoes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `contato`
+--
+ALTER TABLE `contato`
+  MODIFY `id_contato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `imagens`
 --
 ALTER TABLE `imagens`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+
 --
 -- AUTO_INCREMENT for table `redes_sociais`
 --
 ALTER TABLE `redes_sociais`
   MODIFY `id_rede` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `site`
 --
 ALTER TABLE `site`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `suporte`
 --
 ALTER TABLE `suporte`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- Constraints for dumped tables
 --
@@ -431,6 +477,7 @@ ALTER TABLE `banner_imagem`
 --
 ALTER TABLE `banner_video`
   ADD CONSTRAINT `FK_banner_video_arquivos` FOREIGN KEY (`id_arquivo`) REFERENCES `arquivos` (`id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
