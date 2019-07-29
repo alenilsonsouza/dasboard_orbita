@@ -50,7 +50,7 @@ class RedeSociais extends model{
 			$this->id_imagem = $id;
 		}
 	}
-	public function setArray($array){
+	public function setArray($array){ 
 		if(is_array($array)){
 			$this->array = $array;
 		}
@@ -77,6 +77,14 @@ class RedeSociais extends model{
 			$sql->bindValue(":id_imagem", $this->id_imagem);
 			$sql->execute(); 
 		}
+	}
+
+	public function getTotal(){
+
+		$sql = "SELECT COUNT(*) as t FROM redes_sociais";
+		$sql = $this->db->query($sql);
+		$sql = $sql->fetch();
+		return $sql['t'];
 	}
 
 	public function excluirById($id){

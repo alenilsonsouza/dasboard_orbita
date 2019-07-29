@@ -53,7 +53,7 @@ class painelbannersController extends controller {
         }
 
         
-        
+        $dados['page'] = "banners";
 		
         $this->loadTemplateInPainel('banners', $dados);
     }
@@ -89,6 +89,8 @@ class painelbannersController extends controller {
             
         }
 
+        $dados['page'] = "banners";
+
         $this->loadTemplateInPainel('adicionarbanner',$dados);
     }
 
@@ -116,6 +118,8 @@ class painelbannersController extends controller {
         $b = new Banners($id);
         $dados['banner'] = $b->getArray();
 
+        $dados['page'] = "banners";
+
         $this->loadTemplateInPainel('editarbanner',$dados);
     }
 
@@ -123,6 +127,7 @@ class painelbannersController extends controller {
         if(!empty($id)){
             $b = new Banners($id);
             $banner = $b->getArray();
+
             $id_arquivo = $banner['id_arquivo'];
 
             $b->excluirBanner($id);
@@ -178,6 +183,8 @@ class painelbannersController extends controller {
             }
         }
 
+        $dados['page'] = "banners";
+
         $this->loadTemplateInPainel('adicionarvideo', $dados);
     }
 
@@ -202,7 +209,7 @@ class painelbannersController extends controller {
         $dados['video'] = $v->getArray();
 
 
-
+        $dados['page'] = "banners";
 
         $this->loadTemplateInPainel('editarvideo', $dados);
     }

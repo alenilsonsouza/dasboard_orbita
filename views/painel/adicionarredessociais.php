@@ -16,24 +16,24 @@
 <div class="row">
   <form method="post" class="col s12" enctype="multipart/form-data">
     <div class="row">
-      <div class="file-field input-field col s12 m3">
+      <div class="file-field input-field col s12 m6">
       <div class="btn">
-        <span>Imagem</span>
+        <span>Imagem (jpg|png|gif|svg)</span>
         <input type="file" required="required" name="imagem">
       </div>
       <div class="file-path-wrapper">
         <input class="file-path validate" type="text">
       </div>
     </div>
-    <div class="input-field col s12 m3">
+    <div class="input-field col s12 m6">
       <input type="text" name="nome_rede" required="required">
       <label for="nome_rede">Nome:</label>
     </div>
-    <div class="input-field col s12 m3">
+    <div class="input-field col s12 m12">
       <input type="url" name="link_rede" required="required">
       <label for="link_rede">URL:</label>
     </div>
-    <div class="input-field col s12 m3">
+    <div class="input-field col s12">
       <input type="submit" value="Cadastrar" class="btn">
     </div>
 

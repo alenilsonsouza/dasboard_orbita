@@ -5,6 +5,15 @@
 <a href="#versão-0013">Versão 0.0.13</a><br>
 <a href="#configurações-iniciais">Configurações Iniciais</a>
 <hr>
+<h2>Versão 0.0.20</h2>
+<ul>
+    <li>Ajustes de navegação dos links do menu</li>
+    <li>Adição do recurso de contato no painel</li>
+    <li>Página de Login: Agora aparece o nome do projeto</li>
+    <li>Agora é possível adicionar Imagens SVG para banners e Redes Sociais</li>
+    <li>Foi feita a correção da configuração da logo escolhida no painel na página de login</li>
+</ul>
+
 <h2>Versão 0.0.18</h2>
 <ul>
     <li>Correção de link de fonte do painel</li>

@@ -19,7 +19,7 @@ class painelusuariosController extends controller {
         $u = new Usuarios();
         $dados['usuarios'] = $u->getUsuarios();
 
-        
+        $dados['page'] = "usuarios";
         
 		
         $this->loadTemplateInPainel('painelusuarios', $dados);
@@ -52,6 +52,7 @@ class painelusuariosController extends controller {
             }
         }
 
+        $dados['page'] = "usuarios";
 
         $this->loadTemplateInPainel('adicionarusuario', $dados);
     }
@@ -80,6 +81,8 @@ class painelusuariosController extends controller {
 
         $u = new Usuarios($id);
         $dados['usuario'] = $u->getUser();
+
+        $dados['page'] = "usuarios";
 
         $this->loadTemplateInPainel('editarusuario', $dados);
     }

@@ -24,6 +24,13 @@ class loginController extends controller {
             }
             
         }
+
+
+        $s = new Site();
+        $dados['site'] = $s->getArray();
+        $c = new Configuracoes();
+        $dados['configuracoes'] = $c->getArray();
+        
 		
 		
         $this->loadViewInPainel('login', $dados);

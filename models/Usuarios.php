@@ -220,6 +220,13 @@ class Usuarios extends model{
 		$sql = $sql->fetch();
 		return $sql['t'];
 	}
+
+	public function getTotalUsers(){
+		$sql = "SELECT COUNT(*) as t FROM usuarios WHERE tipo > 1";
+		$sql = $this->db->query($sql);
+		$sql = $sql->fetch();
+		return $sql['t'];
+	}
 	
 	
 	

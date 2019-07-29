@@ -42,7 +42,7 @@ class menuperfilController extends controller {
         $dados['usuario'] = $u->getUser();
 
         
-        
+        $dados['page'] = "menuperfil";
 		
         $this->loadTemplateInPainel('menuperfil', $dados);
     }

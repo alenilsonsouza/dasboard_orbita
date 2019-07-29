@@ -37,7 +37,7 @@ class painelsuporteController extends controller {
         $dados['suportes'] = $s->getSuporte($id_usuario, $offset, $limit);
         
 
-        
+        $dados['page'] = "suporte";
         
 		
         $this->loadTemplateInPainel('suporte', $dados);
@@ -73,6 +73,8 @@ class painelsuporteController extends controller {
             exit;
         }
 
+        $dados['page'] = "suporte";
+
         $this->loadTemplateInPainel('abrirsuporte', $dados);
     }
 
@@ -104,7 +106,7 @@ class painelsuporteController extends controller {
 
         $dados['respostas'] = $s->getResposta($dados['suporte']['idsuporte']);
 
-
+        $dados['page'] = "suporte";
 
         $this->loadTemplateInPainel("versuporte", $dados);
     }

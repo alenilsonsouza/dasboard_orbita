@@ -1,9 +1,3 @@
-<?php
-$s = new Site();
-$site = $s->getArray();
-$c = new Configuracoes();
-$configuracoes = $c->getArray();
-?>
 <!Doctype html>
 <html lang="pt-BR">
     <head>
@@ -45,10 +39,9 @@ $configuracoes = $c->getArray();
 <div class="container"> 
   <div class="row">
     <div class="col s12">
-      <p class="center"><img src="<?php echo BASE_URL;?>assets/images/logo_aleevolucoes.png" width="200"></p>
+      <p class="center"><img src="<?php echo BASE_URL;?>assets/arquivos/<?php echo $viewData['configuracoes']['url_arquivo'];?>" width="200"></p>
         
-      <h4 class="center">CDC - ADM!</h4>
-      
+      <h4 class="center">Painel<br><?php echo $viewData['site']['titulo'];?></h4>
       
     </div>
   </div>

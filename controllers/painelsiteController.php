@@ -40,7 +40,7 @@ class painelsiteController extends controller {
         $dados['site'] = $s->getArray();
 
         
-        
+        $dados['page'] = "site";
 		
         $this->loadTemplateInPainel('painelsite', $dados);
     }

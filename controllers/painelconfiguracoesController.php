@@ -48,7 +48,7 @@ class painelconfiguracoesController extends controller {
 
 
 
-        
+        $dados['page'] = "configuracoes";
         
 		
         $this->loadTemplateInPainel('painelconfiguracoes', $dados);

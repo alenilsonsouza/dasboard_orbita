@@ -25,7 +25,7 @@
 			</div>
 			<div class="input-field col s12">
 				<textarea id="scripts" class="materialize-textarea" name="scripts"><?php echo $site['scripts'];?></textarea>
-          		<label for="scripts">Google Analistycs:</label>
+          		<label for="scripts">Outros Scripts (Google analystic, Pixel Facebook, etc.):</label>
 			</div>
 			<div class="input-field col s12">
 				<input type="submit" value="Atualizar" class="btn">

@@ -18,6 +18,11 @@ class homeController extends controller {
 
         $v = new Video();
         $dados['video'] = $v->getArray(); 
+
+
+        //Informações para o template
+        $template = new Template();
+        $dados['template'] = $template->getInfo();
 		
 		
         $this->loadTemplate('home', $dados);

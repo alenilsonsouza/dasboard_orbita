@@ -39,26 +39,26 @@ $configuracoes = $c->getArray();
             <?php endif;?>
         </div>
       </a>
-    
+      <?php $p = $viewData['page'];?>
       <div class="col s12">
         <div class="perfil">
           <p>Olá <?php echo $nome;?></p>
-          <a href="<?php echo BASE_URL;?>menuperfil" class="linkPerfil"><i class="material-icons left">web</i>Meu Perfil</a>
-          <a href="<?php echo BASE_URL;?>painelconfiguracoes" class="linkPerfil"><i class="material-icons left">settings</i>Configurações</a>
+          <a href="<?php echo BASE_URL;?>menuperfil" class="linkPerfil <?php echo ($p == 'menuperfil')?'ativo':'';?>"><i class="material-icons left">web</i>Meu Perfil</a>
+          <a href="<?php echo BASE_URL;?>painelconfiguracoes" class="linkPerfil <?php echo ($p == 'configuracoes')?'ativo':'';?>"><i class="material-icons left">settings</i>Configurações</a>
         </div>    
       </div>
-    
-    <nav class="menuVertical">
+          <nav class="menuVertical">
       <ul>
-        <li><a href="<?php echo BASE_URL;?>" target="projeto"><i class="material-icons left">web</i>Ver Site</a></li>
-        <li><a href="<?php echo BASE_URL;?>painel"><i class="material-icons left">dashboard</i>Painel</a></li>
-        <li><a href="<?php echo BASE_URL;?>painelsite"><i class="material-icons left">web</i>Site</a></li>
-        <li><a href="<?php echo BASE_URL;?>painelredessociais"><i class="material-icons left">public</i>Redes Sociais</a></li>
-        <li><a href="<?php echo BASE_URL;?>painelbanners"><i class="material-icons left">collections</i>Banners</a></li>
-        <li><a href="<?php echo BASE_URL;?>painelblog"><i class="material-icons left">collections</i>Blog</a></li>
+        <li><a href="<?php echo BASE_URL;?>painel" class="<?php echo ($p == 'painel')?'ativo':'';?>"><i class="material-icons left">dashboard</i>Painel</a></li>
+        <li><a href="<?php echo BASE_URL;?>" target="projeto"><i class="material-icons left">web_asset</i>Ver Site</a></li>
+        <li><a href="<?php echo BASE_URL;?>painelsite" class="<?php echo ($p == 'site')?'ativo':'';?>"><i class="material-icons left">web</i>Site</a></li>
+        <li><a href="<?php echo BASE_URL;?>painelredessociais" class="<?php echo ($p == 'redes')?'ativo':'';?>"><i class="material-icons left">public</i>Redes Sociais</a></li>
+        <li><a href="<?php echo BASE_URL;?>painelbanners" class="<?php echo ($p == 'banners')?'ativo':'';?>"><i class="material-icons left">collections</i>Banners</a></li>
+        <li><a href="<?php echo BASE_URL;?>painelblog" class="<?php echo ($p == 'blog')?'ativo':'';?>"><i class="material-icons left">message</i>Blog</a></li>
+        <li><a href="<?php echo BASE_URL;?>painelcontato" class="<?php echo ($p == 'contato')?'ativo':'';?>"><i class="material-icons left">email</i>Contato</a></li>
         
-       <li><a href="<?php echo BASE_URL;?>painelusuarios"><i class="material-icons left">supervised_user_circle</i>Usuarios</a></li>
-       <li><a href="<?php echo BASE_URL;?>painelsuporte"><i class="material-icons left">help</i>Suporte</a></li>
+       <li><a href="<?php echo BASE_URL;?>painelusuarios" class="<?php echo ($p == 'usuarios')?'ativo':'';?>"><i class="material-icons left">supervised_user_circle</i>Usuarios</a></li>
+       <li><a href="<?php echo BASE_URL;?>painelsuporte" class="<?php echo ($p == 'suporte')?'ativo':'';?>"><i class="material-icons left">help</i>Suporte</a></li>
         <li><a href="<?php echo BASE_URL;?>login/sair"><i class="material-icons left">exit_to_app</i>Sair</a></li>
       </ul>
     </nav>

@@ -19,6 +19,8 @@ class painelredessociaisController extends controller {
         $r = new RedeSociais();
         $dados['redes'] = $r->getArray();
 
+        $dados['page'] = "redes";
+
         $this->loadTemplateInPainel('painelredessociais', $dados);
     }
 
@@ -28,6 +30,7 @@ class painelredessociaisController extends controller {
         if(!empty($_POST['nome_rede'])){
 
             $imagem = $_FILES['imagem'];
+            
 
 
             $i = new Arquivos();
@@ -43,6 +46,8 @@ class painelredessociaisController extends controller {
             exit;
 
         }
+
+        $dados['page'] = "redes";
 
         $this->loadTemplateInPainel('adicionarredessociais', $dados);
     }
@@ -84,6 +89,8 @@ class painelredessociaisController extends controller {
 
         $r = new RedeSociais($id);
         $dados['rede'] = $r->getArray();
+
+        $dados['page'] = "redes";
 
         $this->loadTemplateInPainel('editarredesociais', $dados);
     }

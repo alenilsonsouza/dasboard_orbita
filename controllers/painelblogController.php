@@ -34,7 +34,7 @@ class painelblogController extends controller {
         $dados['blogs'] = $blog->getBlogs($offset, $limit);
 
         
-        
+        $dados['page'] = "blog";
 		
         $this->loadTemplateInPainel('painelblog', $dados);
     }
@@ -64,6 +64,7 @@ class painelblogController extends controller {
 
         }
 
+        $dados['page'] = "blog";
 
 
         $this->loadTemplateInPainel('adicionarblog', $dados);
@@ -110,7 +111,8 @@ class painelblogController extends controller {
         $b = new Blog($id);
         $dados['blog'] = $b->getArray();
 
-
+        $dados['page'] = "blog";
+        
         $this->loadTemplateInPainel('editarblog', $dados);
     }
 
