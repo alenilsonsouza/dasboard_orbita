@@ -6,17 +6,28 @@ global $db;
 
 $config = array();
 if(ENVIRONMENT == 'development') {
+
 	define("BASE_URL", "http://localhost/C02_meusClientes/mvc_padrao/");
 	$config['dbname'] = 'mvc_padrao';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = 'vertrigo';
-} else {
-	define("BASE_URL", "//www.fimag.com.br/projeto/");
-	$config['dbname'] = 'aleevolu_site';
-	$config['host'] = '67.23.238.10';
-	$config['dbuser'] = 'aleevolu_site';
-	$config['dbpass'] = '#amcqFSg~ZP~';
+
+}elseif(ENVIRONMENT == 'preview'){
+
+	define("BASE_URL", "//www.seusite.com.br/projeto/");
+	$config['dbname'] = 'bd_name';
+	$config['host'] = 'host';
+	$config['dbuser'] = 'user_bd';
+	$config['dbpass'] = '#pass_bd';
+
+} elseif(ENVIRONMENT == 'production') {
+
+	define("BASE_URL", "//www.seusite.com.br/");
+	$config['dbname'] = 'bd_name';
+	$config['host'] = 'host';
+	$config['dbuser'] = 'user_bd';
+	$config['dbpass'] = '#pass_bd';
 }
 
 //Define o Desenvolvedor do Projeto

@@ -5,9 +5,11 @@
 <a href="#versão-0013">Versão 0.0.13</a><br>
 <a href="#configurações-iniciais">Configurações Iniciais</a>
 <hr>
+<h2>Versão 0.0.23</h2>
+<ul>
+    <li>Ajuste nos arquivos config, htacess e environment</li>
+</ul>
 <h2>Versão 0.0.22</h2>
-
-
 <ul>
     <li>Alteração no gitignore</li>
 </ul>
