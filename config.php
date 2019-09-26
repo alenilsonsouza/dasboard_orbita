@@ -27,7 +27,7 @@ if(ENVIRONMENT == 'development') {
 	$config['dbname'] = 'bd_name';
 	$config['host'] = 'host';
 	$config['dbuser'] = 'user_bd';
-	$config['dbpass'] = '#pass_bd';
+	$config['dbpass'] = '#pass_bd'; 
 }
 
 //Define o Desenvolvedor do Projeto
