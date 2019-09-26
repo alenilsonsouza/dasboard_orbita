@@ -7,7 +7,7 @@ global $db;
 $config = array();
 if(ENVIRONMENT == 'development') {
 
-	define("BASE_URL", "http://localhost/C02_meusClientes/mvc_padrao/");
+	define("BASE_URL", "http://localhost/C01_clientesOrbita/instituoforence.com.br/");
 	$config['dbname'] = 'mvc_padrao';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
