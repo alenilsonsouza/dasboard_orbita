@@ -684,3 +684,61 @@ button:hover{
 		background-color:$corCinzaEscuro;
 	}
 }
+/*Responsivo*/
+@media screen and (max-width:1660px){
+	#bannerHome .conteudoTexto .barraBanner{
+		top:-140px;
+		left:0;
+	}
+	#bannerHome .conteudoTexto .texto p{
+
+		font-size: 13px;
+		line-height: 14px;
+		
+	}
+	#bannerHome{
+		background-position: center;
+	}
+	.conteudoContato .titulo .titulo1{
+		font-size:30px;
+	}
+	.conteudoContato .titulo .titulo2{
+		font-size:33px;
+		margin-top:-12px;
+	}
+	.conteudoContato .formContato input, .conteudoContato .formContato textarea{
+		padding:10px;
+		font-size:14px;
+	}
+	#rodape{
+		height: 78px;
+	}
+	#areaCertificadoTotal~#rodape{
+		margin-top:-78px;
+	}
+	#topo{
+		height: 65px;
+	}
+	#areaCertificadoTotal{
+		margin-top:-65px;
+	}
+	.conteudoContato .titulo{
+		margin-bottom:20px;
+	}
+	#logo img{
+		height: 47px;
+	}
+}
+@media screen and (max-width:1234px){
+	#bannerHome .conteudoTexto .barraBanner{
+		top:-120px;
+		left:0;
+	}
+	
+
+}
+@media screen and (max-width:1210px){
+	.conteudo{
+		padding:0 10px;
+	}
+}
