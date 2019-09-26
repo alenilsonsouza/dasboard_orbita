@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 29-Jul-2019 às 18:14
+-- Generation Time: 26-Set-2019 às 15:25
 -- Versão do servidor: 5.7.24
 -- versão do PHP: 7.1.24
 
@@ -169,14 +169,6 @@ CREATE TABLE `contato` (
   `data` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `contato`
---
-
-INSERT INTO `contato` (`id_contato`, `nome`, `email`, `assunto`, `mensagem`, `data`) VALUES
-(1, 'Alenilson Souza', 'alenlsonsouza@gmail.com', 'Assunto Teste', 'Mensagem Teste', '2019-07-24'),
-(2, 'Alenilson Souza', 'alenilsonsouza@gmail.com', 'Assunto Teste', 'Gostaria de fazer um orçamento', '2019-07-26');
-
 -- --------------------------------------------------------
 
 --
@@ -263,7 +255,7 @@ CREATE TABLE `site` (
 --
 
 INSERT INTO `site` (`id`, `titulo`, `descricao`, `palavra_chave`, `emails`, `scripts`) VALUES
-(1, 'MVC Padrão', 'Descrição do projeto', 'Coloque as palavras-chave aqui', 'alenilsonsouza@gmail.com', '');
+(1, 'Instituto Forence', 'Descrição do projeto', 'Coloque as palavras-chave aqui', 'alenilsonsouza@gmail.com', '');
 
 -- --------------------------------------------------------
 
@@ -305,8 +297,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `email`, `senha`, `ip`, `ultimo_login`, `navegador`, `tipo`) VALUES
-(1, 'Alenilson Vieira de Souza', 'alenilsonsouza@gmail.com', '83ee787f916c12996ca4eff4093dd2dd', '::1', '2019-07-29', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36', 1),
-(5, 'Orbita', 'juliana@agenciaorbita.com.br', '3075701349d122f0b953716d38989a95', NULL, NULL, NULL, 1);
+(1, 'Alenilson Vieira de Souza', 'alenilsonsouza@gmail.com', '83ee787f916c12996ca4eff4093dd2dd', NULL, NULL, NULL, 1),
+(5, 'Orbita', 'juliana@agenciaorbita.com.br', '3075701349d122f0b953716d38989a95', NULL, NULL, NULL, 1),
+(7, 'lecampista', 'sac@dettmann.com.br', '4badaee57fed5610012a296273158f5f', NULL, NULL, NULL, 1);
 
 --
 -- Indexes for dumped tables
@@ -430,7 +423,7 @@ ALTER TABLE `configuracoes`
 -- AUTO_INCREMENT for table `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id_contato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_contato` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `imagens`
@@ -460,7 +453,7 @@ ALTER TABLE `suporte`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

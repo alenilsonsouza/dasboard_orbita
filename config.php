@@ -8,18 +8,18 @@ $config = array();
 if(ENVIRONMENT == 'development') {
 
 	define("BASE_URL", "http://localhost/C01_clientesOrbita/instituoforence.com.br/");
-	$config['dbname'] = 'mvc_padrao';
+	$config['dbname'] = 'institutoforense';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = 'vertrigo';
 
 }elseif(ENVIRONMENT == 'preview'){
 
-	define("BASE_URL", "//www.seusite.com.br/projeto/");
-	$config['dbname'] = 'bd_name';
+	define("BASE_URL", "//www.agenciaorbita.com.br/institutoforense/");
+	$config['dbname'] = 'orbita_instituto';
 	$config['host'] = 'host';
-	$config['dbuser'] = 'user_bd';
-	$config['dbpass'] = '#pass_bd';
+	$config['dbuser'] = 'orbita_institutoadmin';
+	$config['dbpass'] = '^m%jSsXBkWZc';
 
 } elseif(ENVIRONMENT == 'production') {
 
