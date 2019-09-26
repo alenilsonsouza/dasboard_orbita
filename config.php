@@ -17,7 +17,7 @@ if(ENVIRONMENT == 'development') {
 
 	define("BASE_URL", "//www.agenciaorbita.com.br/institutoforense/");
 	$config['dbname'] = 'orbita_instituto';
-	$config['host'] = 'host';
+	$config['host'] = 'localhost';
 	$config['dbuser'] = 'orbita_institutoadmin';
 	$config['dbpass'] = '^m%jSsXBkWZc';
 
