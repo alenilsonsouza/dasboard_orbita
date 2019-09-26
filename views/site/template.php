@@ -202,7 +202,7 @@ $site = $s->getArray();
   font-weight: normal;
   font-style: normal;
 }
-	<?php require 'assets/css/geral.css';?>
+<?php require 'assets/css/geral.css';?>
 
 </style>
 </head>
@@ -233,7 +233,12 @@ $site = $s->getArray();
 				</li>
 			</ul>
 		</nav>
-	</div>
+    </div>
+    <div id="btMenu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </header>
 
 
