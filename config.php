@@ -7,11 +7,11 @@ global $db;
 $config = array();
 if(ENVIRONMENT == 'development') {
 
-	define("BASE_URL", "http://localhost/C02_meusClientes/mvc_padrao/");
-	$config['dbname'] = 'mvc_padrao';
+	define("BASE_URL", "http://localhost/padroes/mvc_padrao_materialize/");
+	$config['dbname'] = 'mvc_materialize';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
-	$config['dbpass'] = 'vertrigo';
+	$config['dbpass'] = '';
 
 }elseif(ENVIRONMENT == 'preview'){
 

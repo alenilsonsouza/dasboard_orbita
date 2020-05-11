@@ -23,34 +23,16 @@ class Site extends model{
 	}
 
 	public function setTitulo($titulo){
-		if(filter_var($titulo, FILTER_SANITIZE_STRING)){
-			$this->titulo = $titulo;
-		}else{
-			$this->titulo = '';
-		}
+		$this->titulo = trim($titulo);	
 	}
 	public function setDescricao($descricao){
-		if(filter_var($descricao, FILTER_SANITIZE_STRING)){
-			$this->descricao = $descricao;
-			
-		}else{
-			$this->descricao = '';
-		}
+		$this->descricao = trim($descricao);
 	}
 	public function setPalavraChave($palavra_chave){
-		if(filter_var($palavra_chave, FILTER_SANITIZE_STRING)){
-			$this->palavra_chave = $palavra_chave;
-
-		}else{
-			$this->palavra_chave ='';
-		}
+		$this->palavra_chave = trim($palavra_chave);
 	}
 	public function setScripts($script){
-		if(filter_var($script, FILTER_SANITIZE_STRING)){
-			$this->scripts = $script;
-		}else{
-			$this->scripts = "";
-		}
+		$this->scripts = trim($script);	
 	}
 	public function setEmails($email){
 		$this->emails = $email;

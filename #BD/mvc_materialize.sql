@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: 29-Jul-2019 às 18:14
--- Versão do servidor: 5.7.24
--- versão do PHP: 7.1.24
+-- Host: 127.0.0.1
+-- Tempo de geração: 11-Abr-2020 às 01:34
+-- Versão do servidor: 10.4.11-MariaDB
+-- versão do PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mvc_padrao`
+-- Banco de dados: `mvc_materialize`
 --
 
 -- --------------------------------------------------------
@@ -35,8 +35,8 @@ CREATE TABLE `arquivos` (
   `data_cadastro` date NOT NULL,
   `tamanho_mb` varchar(15) NOT NULL DEFAULT '0',
   `tipo` varchar(15) NOT NULL DEFAULT '0',
-  `largura` int(11) DEFAULT '0',
-  `altura` int(11) DEFAULT '0'
+  `largura` int(11) DEFAULT 0,
+  `altura` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -66,11 +66,11 @@ INSERT INTO `arquivos` (`id`, `nome_arquivo`, `url_arquivo`, `data_cadastro`, `t
 
 CREATE TABLE `banner_imagem` (
   `id` int(11) NOT NULL,
-  `id_arquivo` int(11) NOT NULL DEFAULT '0',
+  `id_arquivo` int(11) NOT NULL DEFAULT 0,
   `nome_banner` varchar(100) NOT NULL DEFAULT '0',
   `url` varchar(100) DEFAULT '0',
-  `ordem` int(11) NOT NULL DEFAULT '0',
-  `tela` tinyint(1) DEFAULT '1'
+  `ordem` int(11) NOT NULL DEFAULT 0,
+  `tela` tinyint(1) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -88,7 +88,7 @@ INSERT INTO `banner_imagem` (`id`, `id_arquivo`, `nome_banner`, `url`, `ordem`, 
 
 CREATE TABLE `banner_video` (
   `id` int(11) NOT NULL,
-  `id_arquivo` int(11) NOT NULL DEFAULT '0',
+  `id_arquivo` int(11) NOT NULL DEFAULT 0,
   `nome_video` varchar(50) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -125,7 +125,7 @@ INSERT INTO `blog` (`id_blog`, `titulo_blog`, `slug_blog`, `meta_description_blo
 
 CREATE TABLE `config` (
   `id` int(11) NOT NULL,
-  `mostrar_banner` tinyint(4) NOT NULL DEFAULT '0' COMMENT '1 - Mosttar banner, 2 - Mostrar Vídeo'
+  `mostrar_banner` tinyint(4) NOT NULL DEFAULT 0 COMMENT '1 - Mosttar banner, 2 - Mostrar Vídeo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -190,7 +190,7 @@ CREATE TABLE `imagens` (
   `largura` varchar(10) NOT NULL DEFAULT '0',
   `altura` varchar(10) NOT NULL DEFAULT '0',
   `nome_url` varchar(100) NOT NULL DEFAULT '0',
-  `id_produto` int(11) NOT NULL DEFAULT '0',
+  `id_produto` int(11) NOT NULL DEFAULT 0,
   `ordem` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -240,7 +240,7 @@ CREATE TABLE `redes_sociais` (
   `id_rede` int(11) NOT NULL,
   `nome_rede` varchar(100) NOT NULL DEFAULT '0',
   `link_rede` varchar(255) NOT NULL DEFAULT '0',
-  `id_imagem` int(11) NOT NULL DEFAULT '0'
+  `id_imagem` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -252,10 +252,10 @@ CREATE TABLE `redes_sociais` (
 CREATE TABLE `site` (
   `id` int(11) NOT NULL,
   `titulo` varchar(200) DEFAULT NULL,
-  `descricao` text,
-  `palavra_chave` text,
-  `emails` text,
-  `scripts` text
+  `descricao` text DEFAULT NULL,
+  `palavra_chave` text DEFAULT NULL,
+  `emails` text DEFAULT NULL,
+  `scripts` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -263,7 +263,7 @@ CREATE TABLE `site` (
 --
 
 INSERT INTO `site` (`id`, `titulo`, `descricao`, `palavra_chave`, `emails`, `scripts`) VALUES
-(1, 'MVC Padrão', 'Descrição do projeto', 'Coloque as palavras-chave aqui', 'alenilsonsouza@gmail.com', '');
+(1, 'MVC Materialize', 'Descrição do projeto', 'Coloque as palavras-chave aqui', 'alenilsonsouza@gmail.com', '');
 
 -- --------------------------------------------------------
 
@@ -277,7 +277,7 @@ CREATE TABLE `suporte` (
   `descricao` text NOT NULL,
   `tipo_suporte` tinyint(2) NOT NULL,
   `data_hora` datetime NOT NULL,
-  `situacao` tinyint(2) NOT NULL DEFAULT '0',
+  `situacao` tinyint(2) NOT NULL DEFAULT 0,
   `id_suporte` int(11) DEFAULT NULL,
   `id_usuario` int(11) NOT NULL,
   `id_arquivo` int(11) DEFAULT NULL
@@ -296,8 +296,8 @@ CREATE TABLE `usuarios` (
   `senha` varchar(32) NOT NULL,
   `ip` varchar(20) DEFAULT NULL,
   `ultimo_login` date DEFAULT NULL,
-  `navegador` text,
-  `tipo` tinyint(4) NOT NULL DEFAULT '2'
+  `navegador` text DEFAULT NULL,
+  `tipo` tinyint(4) NOT NULL DEFAULT 2
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -305,165 +305,165 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `email`, `senha`, `ip`, `ultimo_login`, `navegador`, `tipo`) VALUES
-(1, 'Alenilson Vieira de Souza', 'alenilsonsouza@gmail.com', '83ee787f916c12996ca4eff4093dd2dd', '::1', '2019-07-29', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36', 1),
+(1, 'Alenilson Vieira de Souza', 'alenilsonsouza@gmail.com', '83ee787f916c12996ca4eff4093dd2dd', NULL, NULL, NULL, 1),
 (5, 'Orbita', 'juliana@agenciaorbita.com.br', '3075701349d122f0b953716d38989a95', NULL, NULL, NULL, 1);
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `arquivos`
+-- Índices para tabela `arquivos`
 --
 ALTER TABLE `arquivos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `banner_imagem`
+-- Índices para tabela `banner_imagem`
 --
 ALTER TABLE `banner_imagem`
   ADD PRIMARY KEY (`id`),
   ADD KEY `FK_banner_imagem_arquivos` (`id_arquivo`);
 
 --
--- Indexes for table `banner_video`
+-- Índices para tabela `banner_video`
 --
 ALTER TABLE `banner_video`
   ADD PRIMARY KEY (`id`),
   ADD KEY `FK_banner_video_arquivos` (`id_arquivo`);
 
 --
--- Indexes for table `blog`
+-- Índices para tabela `blog`
 --
 ALTER TABLE `blog`
   ADD PRIMARY KEY (`id_blog`);
 
 --
--- Indexes for table `config`
+-- Índices para tabela `config`
 --
 ALTER TABLE `config`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `configuracoes`
+-- Índices para tabela `configuracoes`
 --
 ALTER TABLE `configuracoes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `contato`
+-- Índices para tabela `contato`
 --
 ALTER TABLE `contato`
   ADD PRIMARY KEY (`id_contato`);
 
 --
--- Indexes for table `imagens`
+-- Índices para tabela `imagens`
 --
 ALTER TABLE `imagens`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `redes_sociais`
+-- Índices para tabela `redes_sociais`
 --
 ALTER TABLE `redes_sociais`
   ADD PRIMARY KEY (`id_rede`);
 
 --
--- Indexes for table `site`
+-- Índices para tabela `site`
 --
 ALTER TABLE `site`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `suporte`
+-- Índices para tabela `suporte`
 --
 ALTER TABLE `suporte`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usuarios`
+-- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `arquivos`
+-- AUTO_INCREMENT de tabela `arquivos`
 --
 ALTER TABLE `arquivos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 
 --
--- AUTO_INCREMENT for table `banner_imagem`
+-- AUTO_INCREMENT de tabela `banner_imagem`
 --
 ALTER TABLE `banner_imagem`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `banner_video`
+-- AUTO_INCREMENT de tabela `banner_video`
 --
 ALTER TABLE `banner_video`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `blog`
+-- AUTO_INCREMENT de tabela `blog`
 --
 ALTER TABLE `blog`
   MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `config`
+-- AUTO_INCREMENT de tabela `config`
 --
 ALTER TABLE `config`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `configuracoes`
+-- AUTO_INCREMENT de tabela `configuracoes`
 --
 ALTER TABLE `configuracoes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `contato`
+-- AUTO_INCREMENT de tabela `contato`
 --
 ALTER TABLE `contato`
   MODIFY `id_contato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `imagens`
+-- AUTO_INCREMENT de tabela `imagens`
 --
 ALTER TABLE `imagens`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
--- AUTO_INCREMENT for table `redes_sociais`
+-- AUTO_INCREMENT de tabela `redes_sociais`
 --
 ALTER TABLE `redes_sociais`
   MODIFY `id_rede` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `site`
+-- AUTO_INCREMENT de tabela `site`
 --
 ALTER TABLE `site`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `suporte`
+-- AUTO_INCREMENT de tabela `suporte`
 --
 ALTER TABLE `suporte`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- Constraints for dumped tables
+-- Restrições para despejos de tabelas
 --
 
 --
