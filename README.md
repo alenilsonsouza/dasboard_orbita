@@ -1,6 +1,6 @@
 # MVC Padrão
 
-Estrutura em MVC - WebSite, CMS com Bootstrap
+Estrutura em MVC - WebSite.
 
 ## No seu git local favor utilizar o comando de não acompanhamento para os seguintes arquivos:
 
