@@ -23,6 +23,8 @@ class homeController extends controller {
         //Informações para o template
         $template = new Template();
         $dados['template'] = $template->getInfo();
+
+        $dados['page'] = 'home';
 		
 		
         $this->loadTemplate('home', $dados);

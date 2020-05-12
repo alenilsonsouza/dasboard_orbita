@@ -2,10 +2,17 @@
 -- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
+<<<<<<< HEAD:#BD/mvc_materialize.sql
 -- Host: 127.0.0.1
 -- Tempo de geração: 11-Abr-2020 às 01:34
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.3
+=======
+-- Host: localhost
+-- Generation Time: 26-Set-2019 às 15:25
+-- Versão do servidor: 5.7.24
+-- versão do PHP: 7.1.24
+>>>>>>> 62d1250456c79a05d0752980d8356282dee6f15c:#BD/mvc_padrao.sql
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -169,14 +176,6 @@ CREATE TABLE `contato` (
   `data` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `contato`
---
-
-INSERT INTO `contato` (`id_contato`, `nome`, `email`, `assunto`, `mensagem`, `data`) VALUES
-(1, 'Alenilson Souza', 'alenlsonsouza@gmail.com', 'Assunto Teste', 'Mensagem Teste', '2019-07-24'),
-(2, 'Alenilson Souza', 'alenilsonsouza@gmail.com', 'Assunto Teste', 'Gostaria de fazer um orçamento', '2019-07-26');
-
 -- --------------------------------------------------------
 
 --
@@ -263,7 +262,11 @@ CREATE TABLE `site` (
 --
 
 INSERT INTO `site` (`id`, `titulo`, `descricao`, `palavra_chave`, `emails`, `scripts`) VALUES
+<<<<<<< HEAD:#BD/mvc_materialize.sql
 (1, 'MVC Materialize', 'Descrição do projeto', 'Coloque as palavras-chave aqui', 'alenilsonsouza@gmail.com', '');
+=======
+(1, 'Instituto Forence', 'Descrição do projeto', 'Coloque as palavras-chave aqui', 'alenilsonsouza@gmail.com', '');
+>>>>>>> 62d1250456c79a05d0752980d8356282dee6f15c:#BD/mvc_padrao.sql
 
 -- --------------------------------------------------------
 
@@ -306,7 +309,12 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `usuario`, `email`, `senha`, `ip`, `ultimo_login`, `navegador`, `tipo`) VALUES
 (1, 'Alenilson Vieira de Souza', 'alenilsonsouza@gmail.com', '83ee787f916c12996ca4eff4093dd2dd', NULL, NULL, NULL, 1),
+<<<<<<< HEAD:#BD/mvc_materialize.sql
 (5, 'Orbita', 'juliana@agenciaorbita.com.br', '3075701349d122f0b953716d38989a95', NULL, NULL, NULL, 1);
+=======
+(5, 'Orbita', 'juliana@agenciaorbita.com.br', '3075701349d122f0b953716d38989a95', NULL, NULL, NULL, 1),
+(7, 'lecampista', 'sac@dettmann.com.br', '4badaee57fed5610012a296273158f5f', NULL, NULL, NULL, 1);
+>>>>>>> 62d1250456c79a05d0752980d8356282dee6f15c:#BD/mvc_padrao.sql
 
 --
 -- Índices para tabelas despejadas
@@ -430,7 +438,7 @@ ALTER TABLE `configuracoes`
 -- AUTO_INCREMENT de tabela `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id_contato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_contato` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `imagens`
@@ -460,7 +468,7 @@ ALTER TABLE `suporte`
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restrições para despejos de tabelas

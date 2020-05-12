@@ -7,19 +7,24 @@ global $db;
 $config = array();
 if(ENVIRONMENT == 'development') {
 
+<<<<<<< HEAD
 	define("BASE_URL", "http://localhost/padroes/mvc_padrao_materialize/");
 	$config['dbname'] = 'mvc_materialize';
+=======
+	define("BASE_URL", "http://localhost/C01_clientesOrbita/instituoforence.com.br/");
+	$config['dbname'] = 'institutoforense';
+>>>>>>> 62d1250456c79a05d0752980d8356282dee6f15c
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
 
 }elseif(ENVIRONMENT == 'preview'){
 
-	define("BASE_URL", "//www.seusite.com.br/projeto/");
-	$config['dbname'] = 'bd_name';
-	$config['host'] = 'host';
-	$config['dbuser'] = 'user_bd';
-	$config['dbpass'] = '#pass_bd';
+	define("BASE_URL", "//www.agenciaorbita.com.br/institutoforense/");
+	$config['dbname'] = 'orbita_instituto';
+	$config['host'] = 'localhost';
+	$config['dbuser'] = 'orbita_institutoadmin';
+	$config['dbpass'] = '^m%jSsXBkWZc';
 
 } elseif(ENVIRONMENT == 'production') {
 
@@ -27,7 +32,7 @@ if(ENVIRONMENT == 'development') {
 	$config['dbname'] = 'bd_name';
 	$config['host'] = 'host';
 	$config['dbuser'] = 'user_bd';
-	$config['dbpass'] = '#pass_bd';
+	$config['dbpass'] = '#pass_bd'; 
 }
 
 //Define o Desenvolvedor do Projeto
