@@ -4,7 +4,7 @@
 
 		<div id="vanilla-slideshow">
 			<?php foreach($banners as $banner):?>
-	        <div class="vanilla-slide" style="background-image: url(<?php echo BASE_URL_FILES;?><?php echo $banner['url_arquivo'];?>)"> 
+	        <div class="vanilla-slide" style="background-image: url('<?php echo BASE_URL_FILES;?><?php echo $banner['url_arquivo'];?>')"> 
 				<a href="<?php echo BASE_URL;?>blog/artigo/<?php echo $banner['url'];?>" class="blog-link-box">
 				    
 				</a>
