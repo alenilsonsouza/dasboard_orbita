@@ -7,7 +7,7 @@ global $db;
 $config = array();
 if(ENVIRONMENT == 'development') {
 
-	define("BASE_URL", "http://localhost/padroes/mvc_padrao_materialize/");
+	define("BASE_URL", "http://localhost/agenciaOrbita/dashborad/");
 	$config['dbname'] = 'mvc_materialize';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';

@@ -22,6 +22,10 @@ class controller {
 		include 'views/painel/template.php';
 	}
 
+	public function loadTemplateInDashboard($viewName, $viewData = array()) {
+		include 'views/dashboard/template.php';
+	}
+
 	public function loadViewInTemplate($viewName, $viewData) {
 		extract($viewData);
 		include 'views/site/'.$viewName.'.php';
@@ -30,6 +34,11 @@ class controller {
 	public function loadViewInPainel($viewName, $viewData) {
 		extract($viewData);
 		include 'views/painel/'.$viewName.'.php';
+	}
+
+	public function loadViewInDashboard($viewName, $viewData) {
+		extract($viewData);
+		include 'views/dashboard/'.$viewName.'.php';
 	}
 
 }
