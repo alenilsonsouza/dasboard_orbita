@@ -8,26 +8,26 @@ $config = array();
 if(ENVIRONMENT == 'development') {
 
 	define("BASE_URL", "http://localhost/agenciaOrbita/dashborad/");
-	$config['dbname'] = 'mvc_materialize';
+	$config['dbname'] = 'dashboard_orbita';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
 
 }elseif(ENVIRONMENT == 'preview'){
 
-	define("BASE_URL", "//www.agenciaorbita.com.br/institutoforense/");
-	$config['dbname'] = 'bd_name';
-	$config['host'] = 'host';
-	$config['dbuser'] = 'user';
-	$config['dbpass'] = 'password'; 
+	define("BASE_URL", "//www.agenciaorbita.com.br/projeto/");
+	$config['dbname'] = 'orbita_dashboard';
+	$config['host'] = 'localhost';
+	$config['dbuser'] = 'orbita_dashboard';
+	$config['dbpass'] = 'c9ipNjkS'; 
 
 } elseif(ENVIRONMENT == 'production') {
 
 	define("BASE_URL", "//www.seusite.com.br/");
-	$config['dbname'] = 'bd_name';
-	$config['host'] = 'host';
-	$config['dbuser'] = 'user';
-	$config['dbpass'] = 'password'; 
+	$config['dbname'] = 'orbita_dashboard';
+	$config['host'] = 'localhost';
+	$config['dbuser'] = 'orbita_dashboard';
+	$config['dbpass'] = 'c9ipNjkS'; 
 }
 /**
  * Conexão com o banco de Dados Mysql

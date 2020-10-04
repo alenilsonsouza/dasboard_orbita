@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard Órbita</title>
     <style>
         <?php require 'partials/fonts.css'; ?>
     </style>
@@ -19,9 +19,12 @@
                 <img src="<?= BASE_IMAGES; ?>orbita.png" alt="">
             </div>
             <div class="areaForm">
-                <form action="" method="post">
+                <form action="<?=BASE_URL;?>dashboardLogin/verificarLogin" method="post">
                     <h4>Olá, tudo bem? Seja bem-vindo!</h4>
-                    <input type="email" name="email" placeholder="Login" required autofocus>
+                    <?php if(!empty($flash)):?>
+                    <div class="aviso"><?=$flash;?></div>
+                    <?php endif;?>
+                    <input type="email" name="email" placeholder="E-mail" required autofocus>
                     <input type="password" name="senha" placeholder="Senha" required>
                     <button>Entrar</button>
                     <a href="">Esquici minha senha</a>

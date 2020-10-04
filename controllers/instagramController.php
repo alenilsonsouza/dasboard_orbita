@@ -1,5 +1,5 @@
 <?php
-class dashboardController extends controller {
+class instagramController extends controller {
 
 	private $user;
 
@@ -16,12 +16,10 @@ class dashboardController extends controller {
     public function index() {
         $dados = array();
 
-        
-        
-        $dados['page'] = "dashboard";
+        $dados['page'] = "instagram";
         
 		
-        $this->loadTemplateInDashboard('dashboard', $dados);
+        $this->loadTemplateInDashboard('instagram', $dados);
     }
 
     

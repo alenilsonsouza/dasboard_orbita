@@ -1,5 +1,5 @@
 <?php
-class dashboardController extends controller {
+class facebookController extends controller {
 
 	private $user;
 
@@ -18,10 +18,10 @@ class dashboardController extends controller {
 
         
         
-        $dados['page'] = "dashboard";
+        $dados['page'] = "facebook";
         
 		
-        $this->loadTemplateInDashboard('dashboard', $dados);
+        $this->loadTemplateInDashboard('facebook', $dados);
     }
 
     
