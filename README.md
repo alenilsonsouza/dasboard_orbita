@@ -1,4 +1,4 @@
-# MVC Padrão
+# Estrutura MVC
 
 Projeto DashBoard.
 
