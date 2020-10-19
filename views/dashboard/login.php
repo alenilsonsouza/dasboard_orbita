@@ -27,7 +27,7 @@
                     <input type="email" name="email" placeholder="E-mail" required autofocus>
                     <input type="password" name="senha" placeholder="Senha" required>
                     <button>Entrar</button>
-                    <a href="">Esquici minha senha</a>
+                    <a href="">Esqueci minha senha</a>
                 </form>
             </div>
         </main>

@@ -15,7 +15,7 @@ if(ENVIRONMENT == 'development') {
 
 }elseif(ENVIRONMENT == 'preview'){
 
-	define("BASE_URL", "//www.agenciaorbita.com.br/projeto/");
+	define("BASE_URL", "//agenciaorbita.com.br/projeto/");
 	$config['dbname'] = 'orbita_dashboard';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'orbita_dashboard';
@@ -23,7 +23,7 @@ if(ENVIRONMENT == 'development') {
 
 } elseif(ENVIRONMENT == 'production') {
 
-	define("BASE_URL", "//www.seusite.com.br/");
+	define("BASE_URL", "//agenciaorbita.com.br/");
 	$config['dbname'] = 'orbita_dashboard';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'orbita_dashboard';

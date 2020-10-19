@@ -66,7 +66,7 @@ class Usuarios extends model{
 	}
 
 	public function isLogged(){
-		$ip = $_SERVER['REMOTE_ADDR'];
+		/*$ip = $_SERVER['REMOTE_ADDR'];
 		$data = date("Y-m-d");
 		$navegador = $_SERVER['HTTP_USER_AGENT'];
 
@@ -82,17 +82,16 @@ class Usuarios extends model{
 
 		}else{
 			$_SESSION['plogin'] ='';
-		}
+		}*/
 
 		
 
 		if(isset($_SESSION['plogin']) && !empty($_SESSION['plogin'])){
 
 			
-			$sql = "SELECT * FROM usuarios WHERE MD5(id) = :id AND ip = :ip";
+			$sql = "SELECT * FROM usuarios WHERE MD5(id) = :id";
 			$sql = $this->db->prepare($sql);
 			$sql->bindValue(":id", $_SESSION['plogin']);
-			$sql->bindValue(":ip", $ip);
 			$sql->execute();
 			if($sql->rowCount()>0){
 				return true;
