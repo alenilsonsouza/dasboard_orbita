@@ -1,6 +1,6 @@
 # MVC Padrão
 
-Estrutura em MVC - WebSite.
+Projeto DashBoard.
 
 ## No seu git local favor utilizar o comando de não acompanhamento para os seguintes arquivos:
 
@@ -37,7 +37,7 @@ $config = array();
 if(ENVIRONMENT == 'development') {
 
 	define("BASE_URL", "http://localhost/agenciaOrbita/simpalaseguros.com.br/");
-	$config['dbname'] = 'simpalaseguros';
+	$config['dbname'] = 'banco';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
